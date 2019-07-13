@@ -12,6 +12,10 @@
  */
 
 Route::get('/', function () {
-		return view('welcome');
+		return view('welcome');	
 	});
-Route::get('hello', 'HelloController@index');
+Route::get('users/{id}/{name}', function ($id,$name) {
+		return 'Tham số là:'.$id.'---'.$name;	
+	});
+Route::get('hello', 'HelloController@hello');
+Route::get('index', 'HelloController@index');
