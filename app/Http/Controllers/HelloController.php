@@ -12,7 +12,25 @@ class HelloController extends Controller {
 	 */
 	public function index() {
 		//
-		return view('hello');
+		return view('welcome');
+	}
+	public function hello() {
+		//
+		$ten ='Chien';
+		$name ='Chien';
+		$age ='20';
+		$address ='Đông quan';
+		$class ='13312';
+
+
+		return view('hello',
+			['ten'=>$ten,
+			'name'=>$name,
+			'age'=>$age,
+			'address'=>$address,
+			'class'=>$class,]
+
+	);
 	}
 
 	/**
