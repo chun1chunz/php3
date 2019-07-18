@@ -14,6 +14,7 @@
 Route::get('/', function () {
 		return view('welcome');	
 	});
+Route::get('students', 'StudentController@index')->name('students');	
 Route::get('users/{id}/{name}', function ($id,$name) {
 		return 'Tham số là:'.$id.'---'.$name;	
 	});
