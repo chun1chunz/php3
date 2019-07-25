@@ -3,6 +3,15 @@
 @section('title','Class page')
 
 @section('content')
- Bang hien thi
- @include('class_detail')
+
+ @include('admin.class_detail')
+ <table border=1>
+     <thead>Bang hien thi
+         <th>ID</th>
+         <th>Name</th>
+         <th>Major</th>
+     </thead>
+    
+ </table>
+ @include('admin.class_detail')
 @endsection

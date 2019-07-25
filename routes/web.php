@@ -23,3 +23,6 @@ Route::get('index', 'HelloController@index');
 Route::get('/admin_temp', function(){
 	return view('admin.master');
 });
+Route::get('/admin_class', function(){
+	return view('admin.class');
+});
