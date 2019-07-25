@@ -20,3 +20,6 @@ Route::get('users/{id}/{name}', function ($id,$name) {
 	});
 Route::get('hello', 'HelloController@hello');
 Route::get('index', 'HelloController@index');
+Route::get('/admin_temp', function(){
+	return view('admin.master');
+});
