@@ -18,8 +18,18 @@ Route::get('students', 'StudentController@index')->name('students');
 Route::get('users/{id}/{name}', function ($id,$name) {
 		return 'Tham số là:'.$id.'---'.$name;	
 	});
+	//
+	//
 Route::get('hello', 'HelloController@hello');
 Route::get('index', 'HelloController@index');
+Route::get('classes/add', 'ClassRoomController@createForm')->name('classes.add-form');
+Route::post('classes/create-post', 'ClassRoomController@create')->name('classes.create-post');
+//
+//
+//Admin tmeplate
+//
+//
+
 Route::get('/admin_temp', function(){
 	return view('admin.master');
 });
