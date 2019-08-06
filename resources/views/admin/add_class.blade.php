@@ -12,12 +12,8 @@
             </ul>
         </div>
     @endif
-    <form action="{{route(isset($class) ? 'classes.update' : 'classes.create-post')}}" method="post">
+    <form action="{{route('classes.create-post')}}" method="post">
         @csrf
-        @if(isset($class))
-            <input type="hidden" name="id" value="{{$class->id}}">
-        @endif
-
         <div class="form-group">
             <label for="name">Name</label>
             <input
@@ -25,7 +21,6 @@
                 type="text"
                 class="form-control"
                 name="name"
-                value="{{isset($class) ? $class->name : ''}}"
             />
         </div>
         <div class="form-group">
@@ -35,7 +30,6 @@
                 type="text"
                 class="form-control"
                 name="teacher_name"
-                value="{{isset($class) ? $class->teacher_name : ''}}"
             />
         </div>
         <div class="form-group">
@@ -43,18 +37,10 @@
                 name="major"
                 class="form-control"
             >
-                <option
-                    selected="{{isset($class) && $class->major == 'CNTT' ? true : false}}"
-                    value="CNTT">Cong nghe thong tin</option>
-                <option
-                    selected="{{isset($class) && $class->major == 'DPT'}}"
-                    value="DPT">Da phuong tien</option>
-                <option
-                    selected="{{isset($class) && $class->major == 'MKT'}}"
-                    value="MKT">Marketing</option>
-                <option
-                    selected="{{isset($class) && $class->major == 'UD'}}"
-                    value="UD">Ung dung</option>
+                <option value="CNTT">Cong nghe thong tin</option>
+                <option value="DPT">Da phuong tien</option>
+                <option value="MKT">Marketing</option>
+                <option value="UD">Ung dung</option>
             </select>
         </div>
         <div class="form-group">
@@ -64,7 +50,6 @@
                 class="form-control"
                 name="max_student"
                 id="max_student"
-                value="{{isset($class) ? $class->max_student : ''}}"
             />
         </div>
         <div>

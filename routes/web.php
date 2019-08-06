@@ -23,6 +23,7 @@ Route::group(
         Route::post('create-post', 'ClassRoomController@create')->name('create-post');
         Route::get('{class}/edit', 'ClassRoomController@editForm')->name('edit');
         Route::post('update-post', 'ClassRoomController@update')->name('update');
+        Route::get('{class}/delete', 'ClassRoomController@delete')->name('delete');
     }
 );
 // Route::get('classes', 'ClassRoomController@index')->name('classes');

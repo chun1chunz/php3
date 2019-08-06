@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ClassRoom;
+use App\Http\Requests\ClassRoomRequest;
+
 
 
 class ClassRoomController extends Controller
@@ -67,6 +69,13 @@ class ClassRoomController extends Controller
         // 3. Update bang phuong thuc update
         $classRoom->update($data);
         // 4. Tra ve danh sach
+        return $this->index();
+    }
+    public function delete(ClassRoom $class){
+        //1 Class là thể hiện của đối tượng ClassRoom 
+        // co id là class truyền vào route
+        //sử dụng phương thức delete
+        $class->delete();
         return $this->index();
     }
 }
