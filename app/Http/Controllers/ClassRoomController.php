@@ -18,6 +18,8 @@ class ClassRoomController extends Controller
     public function index()
     {
         $classes = ClassRoom::all();
+        $classes = $classes->load('admins');
+        //dd($classes->toArray());
         return view('admin.class', ['classes' => $classes]);
         
     }

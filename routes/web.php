@@ -31,6 +31,13 @@ Route::group(
 // Route::post('classes/create-post', 'ClassRoomController@create')
 //     ->name('classes.create-post');
 
+Route::group(['prefix' => 'admins','as'=>'admins'], 
+    function () {
+        Route::get('/', 'AdminController@index')->name('list');
+        Route::get('class', 'AdminController@indexclass')->name('class');
+    }
+);
+
 Route::get('students', 'StudentController@index')->name('students');	
 Route::get('users/{id}/{name}', function ($id,$name) {
 		return 'Tham số là:'.$id.'---'.$name;	

@@ -11,6 +11,10 @@ class Student extends Model
     protected $fillable = [
         'name',
         'address',
-        'university'
+        'university',
+        'class_id'
     ];
+    public function classRoom(){
+        return $this->belongsTo('App\Models\ClassRoom');
+    }
 }

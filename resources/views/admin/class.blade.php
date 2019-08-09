@@ -21,6 +21,15 @@
                     <td>{{$class->major}}</td>
                     <td>{{$class->max_student}}</td>
                     <td>
+                      @if(count($class->admins))
+                        @foreach($class->admins as $admin)
+                          <p>{{$admin->name}}</p>
+                        @endforeach
+                      @else
+                        <p>Khong co admin</p>
+                      @endif
+                    </td>
+                    <td>
                         <a href="{{route('classes.edit', $class->id)}}">Update</a>
                         <a href="{{route('classes.delete', $class->id)}}">
                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" data-id="">
