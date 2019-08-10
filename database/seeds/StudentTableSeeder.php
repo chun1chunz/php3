@@ -11,32 +11,30 @@ class StudentTableSeeder extends Seeder
      */
     public function run()
     {
-        //
-        if(DB::table('students')->count()==0){
+        if (DB::table('students')->count() == 0) {
             DB::table('students')->insert([
                 [
-                'id' =>1,
-                'name'=>"aaaa",
-                'address'=> 'NV A',
-                'university'=>"CNTT",
-                'class_id'=>"1"
-               
-            ],
-            [
-                'id' =>2,
-                'name'=>"Pt13313",
-                'address'=> 'NV b',
-                'university'=>"CNTT",
-                'class_id'=>"2"
-            ],
-            [
-                'id' =>3,
-                'name'=>"13314",
-                'address'=> 'NV M',
-                'university'=>"Marketing",
-                'class_id'=>"3"
-            ],
-        ]);
+                    'id' => 1,
+                    'name' => 'PT11111',
+                    'address' => 'Ha Noi',
+                    'university' => 'FPT',
+                    'class_id' => '1'
+                ],
+                [
+                    'id' => 2,
+                    'name' => 'PT22222',
+                    'address' => 'Ha Noi',
+                    'university' => 'FPT',
+                    'class_id' => '1'
+                ],
+                [
+                    'id' => 3,
+                    'name' => 'PT33333',
+                    'address' => 'Ha Noi',
+                    'university' => 'FPT',
+                    'class_id' => '3'
+                ],
+            ]);
         }
     }
 }
